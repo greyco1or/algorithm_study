@@ -1,2 +1,2 @@
 # algorithm_study
-Studying Alogrithm with baekjoon
+Studying Alogrithm with baekjoon, programmers
