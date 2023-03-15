@@ -2,14 +2,13 @@ import java.util.*;
 
 class Solution {
     public String solution(String my_string) {
-        String answer = my_string;
         String[] filter = {"a", "e", "i", "o", "u"};
         for(String s : filter) {
-            if(answer.contains(s)) {
-                answer = answer.replace(s, "");
+            if(my_string.contains(s)) {
+                my_string = my_string.replace(s, "");
             }
         }
         
-        return answer;
+        return my_string;
     }
 }
