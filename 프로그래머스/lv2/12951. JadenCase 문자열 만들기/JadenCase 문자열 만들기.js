@@ -1,18 +1,9 @@
 function solution(s) {
-    var answer = '';
-    let str = s.toLowerCase();
-    let arr = str.split("");
-    let tmp = " ";
-    for(let v of arr) {
-        if(tmp == " ") {
-            tmp = v;
-            let upCase = v.toUpperCase();
-            console.log(upCase);
-            answer += upCase;
-        } else {
-            tmp = v;
-            answer += v;
-        }
+    var answer = s.split(" ");
+
+    for(var i=0; i<answer.length; i++){
+        answer[i] = answer[i].substring(0,1).toUpperCase() + answer[i].substring(1).toLowerCase();
     }
-    return answer;
+
+    return answer.join(" ");
 }
