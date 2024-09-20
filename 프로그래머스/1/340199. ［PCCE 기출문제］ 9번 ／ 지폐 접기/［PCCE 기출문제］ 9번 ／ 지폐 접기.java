@@ -4,7 +4,6 @@ class Solution {
     public int solution(int[] wallet, int[] bill) {
         int answer = 0;
         
-        // 지갑과 지폐의 크기를 정렬
         Arrays.sort(wallet);
         Arrays.sort(bill);
         
@@ -15,8 +14,7 @@ class Solution {
                 bill[0] /= 2;
             }
             answer++;
-            
-            // 정렬 유지
+
             Arrays.sort(bill);
         }
         
