@@ -4,11 +4,11 @@ class Solution {
     public int solution(int[] nums) {
         int chance = nums.length/2;
         int answer = 0;
-        Map<Integer, Integer> map = new HashMap<>();
+        HashSet<Integer> hashSet = new HashSet<>();
         for(int num : nums) {
-            map.merge(num, 1 , (oldValue, newValue) -> oldValue + newValue);
+            hashSet.add(num);
         }
-        answer = map.size();
+        answer = hashSet.size();
         if(answer > chance) {
             answer = chance; 
         }
