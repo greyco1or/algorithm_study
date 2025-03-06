@@ -3,17 +3,10 @@ import java.util.*;
 public class Solution {
     public int[] solution(int []arr) {
         ArrayList<Integer> arrayList = new ArrayList<>();
-        Stack<Integer> stack = new Stack<>();
-        for(int num : arr) {
-            if(stack.isEmpty()) {
-                stack.push(num);
-                arrayList.add(num);
-            } else {
-                int tmp = stack.peek();
-                if(num != tmp) {
-                    stack.push(num);
-                    arrayList.add(num);
-                }
+        arrayList.add(arr[0]);
+        for(int i=1; i < arr.length; i++) {
+            if(arrayList.get(arrayList.size()-1) != arr[i]) {
+                arrayList.add(arr[i]);
             }
         }
         int[] answer = new int[arrayList.size()];
